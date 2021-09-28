@@ -12,7 +12,7 @@ function Login() {
 
   const validatePassword = (e) => {
     e.preventDefault();
-    if (email === "" && password === "") {
+    if (email === "nithin@gmail.com" && password === "Nithin123") {
       dispatch(setUser({ email, password }));
       history.push("/");
     } else {

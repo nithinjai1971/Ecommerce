@@ -139,6 +139,40 @@ export const appSlice = createSlice({
       }
       state.currentProductList = tempData;
     },
+
+    increaseProductQuantity: (state, action) => {
+      let tempArray = [];
+      for (let i = 0; i < state.cart.length; i++) {
+        if (state.cart[i].id == action.payload) {
+          tempArray.push({
+            ...state.cart[i],
+            quantity: (state.cart[i].quantity += 1),
+          });
+        } else {
+          tempArray.push(state.cart[i]);
+        }
+      }
+      state.cart = tempArray;
+    },
+
+    decreaseProductQuantity: (state, action) => {
+      let tempArray = [];
+      for (let i = 0; i < state.cart.length; i++) {
+        if (state.cart[i].id == action.payload) {
+          if (state.cart[i].quantity > 1) {
+            tempArray.push({
+              ...state.cart[i],
+              quantity: (state.cart[i].quantity -= 1),
+            });
+          } else {
+            tempArray.push(state.cart[i]);
+          }
+        } else {
+          tempArray.push(state.cart[i]);
+        }
+      }
+      state.cart = tempArray;
+    },
   },
 });
 
@@ -149,6 +183,8 @@ export const {
   getProdDetails,
   paginator,
   setCurrentPage,
+  increaseProductQuantity,
+  decreaseProductQuantity,
 } = appSlice.actions;
 
 export const selectProdById = (state, prodId) =>

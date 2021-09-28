@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+import {
+  increaseProductQuantity,
+  decreaseProductQuantity,
+} from "../../Redux/appSlice";
 import "./Cart.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 function Cart() {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.app.cart);
   const [total, setTotal] = useState(0);
 
@@ -28,9 +33,23 @@ function Cart() {
                   <h4>{cartItem.title}</h4>
                   <h6>MRP: {cartItem.mrp}</h6>
                   <div className="buttons">
-                    <p className="quantity_button">-</p>
+                    <p
+                      className="quantity_button"
+                      onClick={(e) =>
+                        dispatch(decreaseProductQuantity(cartItem.id))
+                      }
+                    >
+                      -
+                    </p>
                     <p>{cartItem.quantity}</p>
-                    <p className="quantity_button">+</p>
+                    <p
+                      className="quantity_button"
+                      onClick={(e) =>
+                        dispatch(increaseProductQuantity(cartItem.id))
+                      }
+                    >
+                      +
+                    </p>
                   </div>
                 </div>
               </div>
