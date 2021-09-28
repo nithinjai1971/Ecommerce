@@ -24,7 +24,7 @@ function ProductDetail() {
           </ul>
           <button
             className="addToCart_button"
-            onClick={(e) => dispatch(addToCart(product))}
+            onClick={(e) => dispatch(addToCart({ ...product, quantity: 1 }))}
           >
             Add to Cart
           </button>

@@ -36,7 +36,9 @@ function Header() {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/cart">Cart {cart.length}</Link>
+          <Link to="/cart">
+            <i className="fas fa-shopping-cart"></i> {cart.length}
+          </Link>
         </li>
       </ul>
     </div>

@@ -21,10 +21,6 @@ function App() {
   const history = useHistory();
   const currentUser = useSelector((state) => state.app.currentUser);
 
-  // useEffect(() => {
-  //   currentUser ? history.push("/") : history.push("/auth/login");
-  // }, []);
-
   return (
     <div>
       {!currentUser && (
