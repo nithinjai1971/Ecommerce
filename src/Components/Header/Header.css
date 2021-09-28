@@ -1,0 +1,33 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: bisque;
+  padding: 2px 10px;
+}
+.Header_navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.Header_navbar > li {
+  padding-left: 10px;
+}
+
+.Title-icon {
+  width: auto;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: red;
+}

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container_product {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.product {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.product_image {
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+}
+
+h4 {
+  margin-bottom: 15px;
+}
+.product_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.addToCart_button {
+  margin-top: 20px;
+  color: white;
+  background: red;
+  border: 0;
+  height: 30px;
+  transition: 200ms;
+}
+
+.addToCart_button:hover {
+  color: red;
+  background: white;
+  cursor: pointer;
+  border: 1px solid black;
+}

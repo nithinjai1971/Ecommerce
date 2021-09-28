@@ -1,0 +1,41 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  width: 300px;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url("https://img.freepik.com/free-vector/gradient-liquid-abstract-background_52683-60469.jpg?size=626&ext=jpg")
+    no-repeat center;
+}
+
+.login_form > input {
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.login_form > input:focus {
+  outline: none;
+}
+
+.login_button {
+  color: white;
+  background: red;
+  border: 0;
+  height: 30px;
+  transition: 200ms;
+}
+
+.login_button:hover {
+  color: red;
+  background: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
